@@ -21,9 +21,9 @@ class FirebaseNotification {
     _firebaseMessaging = FirebaseMessaging();
 
     if (Platform.isIOS) {
-      _firebaseMessaging.subscribeToTopic("th.go.nakornnont.app");
+      _firebaseMessaging.subscribeToTopic("com.thailocallink.template.app_template");
     } else {
-      _firebaseMessaging.subscribeToTopic("th.go.nakornnont");
+      _firebaseMessaging.subscribeToTopic("com.thailocallink.template.app_template");
     }
 
     _firebaseMessaging.subscribeToTopic("news");
@@ -34,7 +34,7 @@ class FirebaseNotification {
     });
     _firebaseMessaging.getToken().then((String token) {
       assert(token != null);
-      print("Push Messaging token: $token");
+      //print("Push Messaging token: $token");
     });
 
     _firebaseMessaging.configure(

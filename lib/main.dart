@@ -48,7 +48,7 @@ void main() async {
   await Firebase.initializeApp();
   final NotificationAppLaunchDetails notificationAppLaunchDetails = await flutterLocalNotificationsPlugin.getNotificationAppLaunchDetails();
 
-  if (notificationAppLaunchDetails?.didNotificationLaunchApp ?? false) {
+  if (notificationAppLaunchDetails.didNotificationLaunchApp ?? false) {
     selectedNotificationPayload = notificationAppLaunchDetails.payload;
     //await Utils().sendDebug(selectedNotificationPayload);
   }
@@ -95,7 +95,7 @@ void main() async {
 
   runApp(
     MaterialApp(
-      title: 'nakornnont',
+      title: 'template_app',
       debugShowCheckedModeBanner: false,
       navigatorKey: navigatorKey,
       theme: ThemeData(
@@ -151,7 +151,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void _configureDidReceiveLocalNotificationSubject() {
-    print("_configureDidReceiveLocala");
+    //print("_configureDidReceiveLocala");
     didReceiveLocalNotificationSubject.stream.listen((ReceivedNotification receivedNotification) async {
       print("iosiosios");
       /*await showDialog(
@@ -177,13 +177,13 @@ class _MyHomePageState extends State<MyHomePage> {
       );*/
       print("_configureDidReceiveLocalb");
     });
-    print("_configureDidReceiveLocalc");
+    //print("_configureDidReceiveLocalc");
   }
 
   void _configureSelectNotificationSubject() {
-    print("_configureSelectNotia");
+    //print("_configureSelectNotia");
     selectNotificationSubject.stream.listen((String payload) async {
-      print("_configureSelectNotib : " + payload);
+      //print("_configureSelectNotib : " + payload);
       //await Navigator.pushNamed(context, '/secondPage');
       //\if (isLogin) {
       await navigatorKey.currentState!.pushReplacement(
@@ -193,7 +193,7 @@ class _MyHomePageState extends State<MyHomePage> {
       );
       //}
     });
-    print("_configureSelectNotic");
+    //print("_configureSelectNotic");
   }
 
   PackageInfo _packageInfo = PackageInfo(

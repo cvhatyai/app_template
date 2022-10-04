@@ -37,10 +37,18 @@ dependencies:
   package_info: ^2.0.0
   shared_preferences: ^0.5.12+4
   rxdart: ^0.27.1
+  flutter_launcher_icons:
+  webview_flutter: ^2.0.4
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+flutter_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -54,7 +62,11 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
+  assets:
+    - assets/images/
+    - assets/images/menu/
+    - assets/images/main/
+    - assets/images/travel/
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
